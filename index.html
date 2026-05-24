@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPRC // JP Nagar Run Club</title>
+    <meta name="description" content="A minimalist, elite running collective in JP Nagar, Bangalore. Structured velocity, technical monospace metrics, and high-performance digital synchronization.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist+Mono:wght@100..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SVG Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header scroll-reveal">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="mono-label">JPRC // 560078</span>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#about" class="nav-link"><span class="mono-label">01 / CONCEPT</span></a>
+                <a href="#bento" class="nav-link"><span class="mono-label">02 / INTERFACE</span></a>
+                <a href="#countdown" class="nav-link"><span class="mono-label">03 / ROUTINE</span></a>
+                <a href="#testimonials" class="nav-link"><span class="mono-label">04 / EVIDENCE</span></a>
+            </nav>
+            <div class="nav-action">
+                <a href="#capture" class="btn-primary"><span class="mono-label">JOIN_SYS</span></a>
+            </div>
+            <!-- Mobile Hamburger -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="mono-label">MENU // MENU</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+        <button class="close-drawer-btn"><span class="mono-label">CLOSE // X</span></button>
+        <div class="drawer-links">
+            <a href="#about" class="drawer-link"><span class="mono-label">01 / CONCEPT</span></a>
+            <a href="#bento" class="drawer-link"><span class="mono-label">02 / INTERFACE</span></a>
+            <a href="#countdown" class="drawer-link"><span class="mono-label">03 / ROUTINE</span></a>
+            <a href="#testimonials" class="drawer-link"><span class="mono-label">04 / EVIDENCE</span></a>
+            <a href="#capture" class="btn-primary drawer-join-btn"><span class="mono-label">JOIN_SYS</span></a>
+        </div>
+    </div>
+
+    <main class="page-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section scroll-reveal" id="about">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-headline">
+                        The elite road <span class="gradient-text">deviants</span> of JP Nagar.
+                    </h1>
+                    
+                    <!-- Metadata Bar -->
+                    <div class="metadata-bar">
+                        <div class="meta-col">
+                            <span class="meta-title">EST. DATE //</span>
+                            <span class="meta-val">2024.10.12</span>
+                        </div>
+                        <div class="meta-col">
+                            <span class="meta-title">DESCRIPTION //</span>
+                            <span class="meta-val">SYSTEMATIC VELOCITY & CODE</span>
+                        </div>
+                        <div class="meta-col">
+                            <span class="meta-title">LOCATION // LIMIT</span>
+                            <span class="meta-val">12.9105° N, 77.5857° E [128 MAX]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beta Capture Section -->
+        <section class="capture-section scroll-reveal" id="capture">
+            <div class="section-label">
+                <span class="mono-label">ACCESS PORTAL // SECURE ENTRY</span>
+            </div>
+            <div class="capture-container">
+                <form id="beta-form" class="capture-form">
+                    <div class="input-wrapper">
+                        <span class="input-prefix font-mono">></span>
+                        <input type="email" id="user-email" placeholder="ENTER ACCESS EMAIL OR COGNITIVE ID..." required>
+                    </div>
+                    <button type="submit" class="silver-btn">
+                        <span class="mono-label">APPLY FOR PASS</span>
+                    </button>
+                </form>
+                <div class="form-feedback font-mono" id="form-feedback"></div>
+            </div>
+        </section>
+
+        <!-- Urgency / Social Proof / Countdown Section -->
+        <section class="urgency-section scroll-reveal" id="countdown">
+            <div class="section-header-centered">
+                <span class="mono-label">NEXT SYNCHRONIZED DEVIATION // RUN_084</span>
+            </div>
+            
+            <!-- Countdown Timer Component -->
+            <div class="countdown-timer">
+                <div class="time-block">
+                    <span class="time-label mono-label">HOURS</span>
+                    <span class="time-digit" id="timer-hours">00</span>
+                </div>
+                <div class="time-separator">/</div>
+                <div class="time-block">
+                    <span class="time-label mono-label">MINUTES</span>
+                    <span class="time-digit" id="timer-minutes">00</span>
+                </div>
+                <div class="time-separator">/</div>
+                <div class="time-block">
+                    <span class="time-label mono-label">SECONDS</span>
+                    <span class="time-digit" id="timer-seconds">00</span>
+                </div>
+            </div>
+            
+            <div class="countdown-meta font-mono">
+                SUNDAY DEPARTURE // 05:30 AM IST // 10K & 15K TEMPO DEVIATIONS // JP NAGAR METRO STATION
+            </div>
+        </section>
+
+        <!-- Bento Feature Grid -->
+        <section class="bento-section scroll-reveal" id="bento">
+            <div class="section-label">
+                <span class="mono-label">SYSTEM METRICS // BENTO INTERFACE</span>
+            </div>
+            <div class="bento-grid">
+                
+                <!-- Card 1: Velocity -->
+                <div class="bento-card scroll-reveal">
+                    <div class="card-header">
+                        <span class="mono-label">01 / VELOCITY</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-headline">Sub-5:00/km deviation.</h3>
+                        <p class="card-description font-sans">
+                            We do not jog. We run with structure. A sustained tempo that bridges physical optimization and mental calibration. If you break, the system breaks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Member Registry -->
+                <div class="bento-card member-registry-card scroll-reveal">
+                    <div class="card-header">
+                        <span class="mono-label">02 / REGISTRY</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="registry-grid">
+                            <!-- Avatar Item 1 -->
+                            <div class="registry-item">
+                                <div class="avatar-wrapper">
+                                    <img src="assets/avatar1.jpg" alt="Member 01" class="avatar-img">
+                                </div>
+                                <span class="registry-name mono-label">ATHLETE_01 // @KARTHIK</span>
+                            </div>
+                            <!-- Avatar Item 2 -->
+                            <div class="registry-item">
+                                <div class="avatar-wrapper">
+                                    <img src="assets/avatar2.jpg" alt="Member 02" class="avatar-img">
+                                </div>
+                                <span class="registry-name mono-label">ATHLETE_14 // @ANANYA</span>
+                            </div>
+                            <!-- Avatar Item 3 -->
+                            <div class="registry-item">
+                                <div class="avatar-wrapper">
+                                    <img src="assets/avatar3.jpg" alt="Member 03" class="avatar-img">
+                                </div>
+                                <span class="registry-name mono-label">ATHLETE_32 // @ROHAN</span>
+                            </div>
+                            <!-- Avatar Item 4 -->
+                            <div class="registry-item">
+                                <div class="avatar-wrapper">
+                                    <img src="assets/avatar4.jpg" alt="Member 04" class="avatar-img">
+                                </div>
+                                <span class="registry-name mono-label">ATHLETE_45 // @SNEHA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative background icon -->
+                    <div class="bg-decorative-icon">
+                        <svg viewBox="0 0 24 24" width="120" height="120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+                            <line x1="7" y1="8" x2="17" y2="8"></line>
+                            <line x1="7" y1="12" x2="17" y2="12"></line>
+                            <line x1="7" y1="16" x2="13" y2="16"></line>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 3: Route -->
+                <div class="bento-card scroll-reveal">
+                    <div class="card-header">
+                        <span class="mono-label">03 / THE ROUTE</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-headline">The asphalt loop.</h3>
+                        <p class="card-description font-sans">
+                            6.2KM starting from Puttenahalli Lake, cutting through 24th Main, and returning via the quiet avenues of 5th Phase. 45m elevation gain.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Ethos -->
+                <div class="bento-card scroll-reveal">
+                    <div class="card-header">
+                        <span class="mono-label">04 / THE ETHOS</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-headline">Zero vanity, absolute metrics.</h3>
+                        <p class="card-description font-sans">
+                            No social media medals. No dynamic badges. We track run logs in clean markdown repos. The metric is speed, the output is pure focus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition Section -->
+        <section class="value-prop scroll-reveal">
+            <div class="value-prop-container">
+                <span class="mono-label value-tag">VALUE PROPOSITION // SYNAPTIC TUNING</span>
+                <h2 class="value-headline">
+                    A running collective optimized for developers, engineers, and technologists in Bangalore. We run at dawn, debug at dusk.
+                </h2>
+                <div class="value-details font-sans">
+                    Physical load is the ultimate counterweight to intellectual exhaustion. JPRC provides the exact structure needed to unlock deep work cycles.
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section scroll-reveal" id="testimonials">
+            <div class="section-label">
+                <span class="mono-label">SYSTEM WITNESSES // TESTIMONIALS</span>
+            </div>
+            
+            <h2 class="testimonials-header">
+                Endorsed by the <span class="gradient-text">optimized</span>.
+            </h2>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="quote">
+                        “The sub-5:00 pace is non-negotiable. Running here mimics compiler optimization—removing bloat, maximizing raw output.”
+                    </p>
+                    <div class="witness-info">
+                        <div class="witness-avatar">
+                            <img src="assets/witness1.jpg" alt="Witness 1" class="avatar-img">
+                        </div>
+                        <div class="witness-meta">
+                            <span class="witness-name mono-label">ATHLETE_09 // CORE ARCHITECT</span>
+                            <span class="witness-org mono-label">TECH_CORP // DEVIANT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="quote">
+                        “JPRC is where my code and cardiovascular systems converge. The Sunday loops are essential for my sanity and cognitive capacity.”
+                    </p>
+                    <div class="witness-info">
+                        <div class="witness-avatar">
+                            <img src="assets/witness2.jpg" alt="Witness 2" class="avatar-img">
+                        </div>
+                        <div class="witness-meta">
+                            <span class="witness-name mono-label">ATHLETE_31 // SYSTEMS ENGINEER</span>
+                            <span class="witness-org mono-label">KUBERNETES_DEV // DEVIANT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta scroll-reveal">
+            <div class="cta-card">
+                <div class="cta-inner">
+                    <span class="mono-label cta-tag">FINAL INVITATION // APERIODIC ACCESS</span>
+                    <h2 class="cta-headline">
+                        Synchronize your physical layer.
+                    </h2>
+                    <p class="cta-body font-sans">
+                        Application queues open every Sunday at 05:30 AM. Strictly capped at 128 active slots to ensure intimate, high-quality, high-tempo runs.
+                    </p>
+                    <div class="cta-btn-wrapper">
+                        <a href="#capture" class="btn-primary"><span class="mono-label">APPLY_FOR_ACCESS</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-logo">
+                <span class="mono-label">JPRC.SYS // JP NAGAR</span>
+                <p class="footer-desc font-sans">An elite road deviation system. Grounded in South Bangalore asphalt.</p>
+            </div>
+            <div class="footer-links">
+                <span class="mono-label footer-section-title">CHANNELS</span>
+                <a href="#about" class="footer-link"><span class="mono-label">01 // TELEGRAM_SECURE</span></a>
+                <a href="#bento" class="footer-link"><span class="mono-label">02 // GITHUB_CHRONICLES</span></a>
+                <a href="#countdown" class="footer-link"><span class="mono-label">03 // STRAVA_SYS</span></a>
+            </div>
+            <div class="footer-coords">
+                <span class="mono-label footer-section-title">STAMPS</span>
+                <span class="mono-label">COORD: 12.9105° N, 77.5857° E</span>
+                <span class="mono-label">STATUS: DEV_ACTIVE</span>
+                <span class="mono-label">© 2026 JPRC. ALL RIGHTS RESOLVED.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Mobile Bottom Nav -->
+    <nav class="floating-mobile-nav" id="floating-nav">
+        <div class="floating-nav-container">
+            <a href="#about" class="float-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span class="float-label">SYS</span>
+            </a>
+            <a href="#bento" class="float-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span class="float-label">BENTO</span>
+            </a>
+            <a href="#capture" class="float-item float-action-btn">
+                <span class="mono-label">JOIN</span>
+            </a>
+            <a href="#countdown" class="float-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span class="float-label">TIMER</span>
+            </a>
+            <a href="#testimonials" class="float-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span class="float-label">FEED</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
