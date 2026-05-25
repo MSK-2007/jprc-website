@@ -719,6 +719,50 @@ body {
     cursor: default;
 }
 
+/* Clickable founder variant (anchor tag) */
+.founder-item--link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.founder-item--link:hover .founder-img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.04);
+}
+
+.founder-item--link:hover .founder-avatar-wrapper {
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.founder-item--link:hover .founder-name {
+    color: var(--text-white);
+}
+
+/* Instagram handle hint overlay */
+.founder-instagram-hint {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(225, 48, 108, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    padding: 4px 10px;
+    font-size: 7px;
+    letter-spacing: 0.15em;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s var(--transition-curve), transform 0.3s var(--transition-curve);
+    pointer-events: none;
+}
+
+.founder-item--link:hover .founder-instagram-hint {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .founder-avatar-wrapper {
     position: relative;
     width: 100%;
