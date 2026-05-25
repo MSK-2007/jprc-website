@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JPRC // JP Nagar Run Club</title>
-    <meta name="description" content="A minimalist, elite running collective in JP Nagar, Bangalore. Structured velocity, technical monospace metrics, and high-performance digital synchronization.">
+    <meta name="description"
+        content="Bangalore's friendliest running community in JP Nagar. Every Sunday at 6 AM from Puttenahalli Lake. All paces welcome. Free forever. Run together, grow together.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist+Mono:wght@100..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist+Mono:wght@100..900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- SVG Noise Overlay -->
     <div class="noise-overlay"></div>
@@ -26,13 +31,13 @@
                 </a>
             </div>
             <nav class="desktop-nav">
-                <a href="#about" class="nav-link"><span class="mono-label">01 / CONCEPT</span></a>
-                <a href="#bento" class="nav-link"><span class="mono-label">02 / INTERFACE</span></a>
-                <a href="#countdown" class="nav-link"><span class="mono-label">03 / ROUTINE</span></a>
-                <a href="#testimonials" class="nav-link"><span class="mono-label">04 / EVIDENCE</span></a>
+                <a href="#about" class="nav-link"><span class="mono-label">01 / ABOUT</span></a>
+                <a href="#bento" class="nav-link"><span class="mono-label">02 / FEATURES</span></a>
+                <a href="#schedule" class="nav-link"><span class="mono-label">03 / SCHEDULE</span></a>
+                <a href="#connect" class="nav-link"><span class="mono-label">04 / CONNECT</span></a>
             </nav>
             <div class="nav-action">
-                <a href="#capture" class="btn-primary"><span class="mono-label">JOIN_SYS</span></a>
+                <a href="register.html" class="btn-primary"><span class="mono-label">JOIN_US</span></a>
             </div>
             <!-- Mobile Hamburger -->
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
@@ -45,11 +50,11 @@
     <div class="mobile-drawer">
         <button class="close-drawer-btn"><span class="mono-label">CLOSE // X</span></button>
         <div class="drawer-links">
-            <a href="#about" class="drawer-link"><span class="mono-label">01 / CONCEPT</span></a>
-            <a href="#bento" class="drawer-link"><span class="mono-label">02 / INTERFACE</span></a>
-            <a href="#countdown" class="drawer-link"><span class="mono-label">03 / ROUTINE</span></a>
-            <a href="#testimonials" class="drawer-link"><span class="mono-label">04 / EVIDENCE</span></a>
-            <a href="#capture" class="btn-primary drawer-join-btn"><span class="mono-label">JOIN_SYS</span></a>
+            <a href="#about" class="drawer-link"><span class="mono-label">01 / ABOUT</span></a>
+            <a href="#bento" class="drawer-link"><span class="mono-label">02 / FEATURES</span></a>
+            <a href="#schedule" class="drawer-link"><span class="mono-label">03 / SCHEDULE</span></a>
+            <a href="#connect" class="drawer-link"><span class="mono-label">04 / CONNECT</span></a>
+            <a href="register.html" class="btn-primary drawer-join-btn"><span class="mono-label">JOIN_US</span></a>
         </div>
     </div>
 
@@ -58,10 +63,21 @@
         <section class="hero-section scroll-reveal" id="about">
             <div class="hero-container">
                 <div class="hero-content">
+                    <div class="hero-eyebrow mono-label">BANGALORE'S FRIENDLIEST RUNNING COMMUNITY</div>
                     <h1 class="hero-headline">
-                        The elite road <span class="gradient-text">deviants</span> of JP Nagar.
+                        Run together, <span class="gradient-text">grow together.</span>
                     </h1>
-                    
+                    <p class="hero-subtext font-sans">
+                        No matter your pace — 6 min/km or 10 min/km — you belong here. We run, we laugh, we sip chai
+                        together. Every Sunday morning at Puttenahalli Lake.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="register.html" class="btn-primary"><span class="mono-label">REGISTER FOR NEXT RUN
+                                →</span></a>
+                        <a href="https://chat.whatsapp.com/YOURGROUPINVITELINK" target="_blank"
+                            class="btn-secondary"><span class="mono-label">JOIN WHATSAPP // 120+ MEMBERS</span></a>
+                    </div>
+
                     <!-- Metadata Bar -->
                     <div class="metadata-bar">
                         <div class="meta-col">
@@ -69,43 +85,26 @@
                             <span class="meta-val">2024.10.12</span>
                         </div>
                         <div class="meta-col">
-                            <span class="meta-title">DESCRIPTION //</span>
-                            <span class="meta-val">SYSTEMATIC VELOCITY & CODE</span>
+                            <span class="meta-title">NEXT RUN //</span>
+                            <span class="meta-val">EVERY SUNDAY, 6:00 AM</span>
                         </div>
                         <div class="meta-col">
-                            <span class="meta-title">LOCATION // LIMIT</span>
-                            <span class="meta-val">12.9105° N, 77.5857° E [128 MAX]</span>
+                            <span class="meta-title">LOCATION // MEET POINT</span>
+                            <span class="meta-val">Clarence Public School, JP Nagar</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Beta Capture Section -->
-        <section class="capture-section scroll-reveal" id="capture">
-            <div class="section-label">
-                <span class="mono-label">ACCESS PORTAL // SECURE ENTRY</span>
-            </div>
-            <div class="capture-container">
-                <form id="beta-form" class="capture-form">
-                    <div class="input-wrapper">
-                        <span class="input-prefix font-mono">></span>
-                        <input type="email" id="user-email" placeholder="ENTER ACCESS EMAIL OR COGNITIVE ID..." required>
-                    </div>
-                    <button type="submit" class="silver-btn">
-                        <span class="mono-label">APPLY FOR PASS</span>
-                    </button>
-                </form>
-                <div class="form-feedback font-mono" id="form-feedback"></div>
-            </div>
-        </section>
 
-        <!-- Urgency / Social Proof / Countdown Section -->
-        <section class="urgency-section scroll-reveal" id="countdown">
+
+        <!-- Countdown Timer Section -->
+        <section class="urgency-section scroll-reveal" id="schedule">
             <div class="section-header-centered">
-                <span class="mono-label">NEXT SYNCHRONIZED DEVIATION // RUN_084</span>
+                <span class="mono-label">NEXT RUN COUNTDOWN // EVERY SUNDAY</span>
             </div>
-            
+
             <!-- Countdown Timer Component -->
             <div class="countdown-timer">
                 <div class="time-block">
@@ -123,28 +122,56 @@
                     <span class="time-digit" id="timer-seconds">00</span>
                 </div>
             </div>
-            
+
             <div class="countdown-meta font-mono">
-                SUNDAY DEPARTURE // 05:30 AM IST // 10K & 15K TEMPO DEVIATIONS // JP NAGAR METRO STATION
+                SUNDAY DEPARTURE // 06:00 AM IST // PUTTENAHALLI LAKE ENTRANCE, JP NAGAR 7TH PHASE
+            </div>
+
+            <!-- Run Day Schedule -->
+            <div class="run-schedule">
+                <div class="schedule-label mono-label">RUN DAY SCHEDULE //</div>
+                <div class="schedule-grid">
+                    <div class="schedule-item">
+                        <span class="sched-time mono-label">5:45 AM</span>
+                        <span class="sched-desc font-sans">Assembly &amp; Warm-up</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="sched-time mono-label">6:00 AM</span>
+                        <span class="sched-desc font-sans">5K Run Starts</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="sched-time mono-label">6:15 AM</span>
+                        <span class="sched-desc font-sans">10K Run Starts</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="sched-time mono-label">7:30 AM</span>
+                        <span class="sched-desc font-sans">Post-run Chai ☕</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="sched-time mono-label">8:00 AM</span>
+                        <span class="sched-desc font-sans">Photos &amp; Wrap-up 📸</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Bento Feature Grid -->
         <section class="bento-section scroll-reveal" id="bento">
             <div class="section-label">
-                <span class="mono-label">SYSTEM METRICS // BENTO INTERFACE</span>
+                <span class="mono-label">MORE THAN JUST RUNNING // COMMUNITY FEATURES</span>
             </div>
             <div class="bento-grid">
-                
-                <!-- Card 1: Velocity -->
+
+                <!-- Card 1: Local Routes -->
                 <div class="bento-card scroll-reveal">
                     <div class="card-header">
-                        <span class="mono-label">01 / VELOCITY</span>
+                        <span class="mono-label">01 / LOCAL ROUTES</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-headline">Sub-5:00/km deviation.</h3>
+                        <h3 class="card-headline">The asphalt loop.</h3>
                         <p class="card-description font-sans">
-                            We do not jog. We run with structure. A sustained tempo that bridges physical optimization and mental calibration. If you break, the system breaks.
+                            Beautiful runs through JP Nagar — from Puttenahalli Lake, cutting through 7th Phase Park and
+                            quiet neighbourhood avenues. 5K and 10K distance options every Sunday.
                         </p>
                     </div>
                 </div>
@@ -152,7 +179,7 @@
                 <!-- Card 2: Member Registry -->
                 <div class="bento-card member-registry-card scroll-reveal">
                     <div class="card-header">
-                        <span class="mono-label">02 / REGISTRY</span>
+                        <span class="mono-label">02 / COMMUNITY</span>
                     </div>
                     <div class="card-body">
                         <div class="registry-grid">
@@ -161,34 +188,36 @@
                                 <div class="avatar-wrapper">
                                     <img src="assets/avatar1.jpg" alt="Member 01" class="avatar-img">
                                 </div>
-                                <span class="registry-name mono-label">ATHLETE_01 // @KARTHIK</span>
+                                <span class="registry-name mono-label">RUNNER_01 // @KARTHIK</span>
                             </div>
                             <!-- Avatar Item 2 -->
                             <div class="registry-item">
                                 <div class="avatar-wrapper">
                                     <img src="assets/avatar2.jpg" alt="Member 02" class="avatar-img">
                                 </div>
-                                <span class="registry-name mono-label">ATHLETE_14 // @ANANYA</span>
+                                <span class="registry-name mono-label">RUNNER_14 // @ANANYA</span>
                             </div>
                             <!-- Avatar Item 3 -->
                             <div class="registry-item">
                                 <div class="avatar-wrapper">
                                     <img src="assets/avatar3.jpg" alt="Member 03" class="avatar-img">
                                 </div>
-                                <span class="registry-name mono-label">ATHLETE_32 // @ROHAN</span>
+                                <span class="registry-name mono-label">RUNNER_32 // @ROHAN</span>
                             </div>
                             <!-- Avatar Item 4 -->
                             <div class="registry-item">
                                 <div class="avatar-wrapper">
                                     <img src="assets/avatar4.jpg" alt="Member 04" class="avatar-img">
                                 </div>
-                                <span class="registry-name mono-label">ATHLETE_45 // @SNEHA</span>
+                                <span class="registry-name mono-label">RUNNER_45 // @SNEHA</span>
                             </div>
                         </div>
+                        <p class="registry-count mono-label">150+ ACTIVE RUNNERS &amp; COUNTING</p>
                     </div>
                     <!-- Decorative background icon -->
                     <div class="bg-decorative-icon">
-                        <svg viewBox="0 0 24 24" width="120" height="120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" width="120" height="120" fill="none" stroke="currentColor"
+                            stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
                             <line x1="7" y1="8" x2="17" y2="8"></line>
                             <line x1="7" y1="12" x2="17" y2="12"></line>
@@ -197,28 +226,30 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Route -->
+                <!-- Card 3: Post-Run Chai -->
                 <div class="bento-card scroll-reveal">
                     <div class="card-header">
-                        <span class="mono-label">03 / THE ROUTE</span>
+                        <span class="mono-label">03 / POST-RUN CHAI ☕</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-headline">The asphalt loop.</h3>
+                        <h3 class="card-headline">Sweat, chai &amp; high-fives.</h3>
                         <p class="card-description font-sans">
-                            6.2KM starting from Puttenahalli Lake, cutting through 24th Main, and returning via the quiet avenues of 5th Phase. 45m elevation gain.
+                            Every run ends with cutting chai, biscuits, and high-fives at our local tapri. The best part
+                            of every Sunday morning — we celebrate every milestone together.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 4: Ethos -->
+                <!-- Card 4: All Paces -->
                 <div class="bento-card scroll-reveal">
                     <div class="card-header">
-                        <span class="mono-label">04 / THE ETHOS</span>
+                        <span class="mono-label">04 / ALL PACES WELCOME</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-headline">Zero vanity, absolute metrics.</h3>
+                        <h3 class="card-headline">6 min/km or 10 min/km.</h3>
                         <p class="card-description font-sans">
-                            No social media medals. No dynamic badges. We track run logs in clean markdown repos. The metric is speed, the output is pure focus.
+                            Walkers, joggers, sprinters — everyone has a pace group that fits. No judgement, no
+                            pressure. Just community, sweat, and Sunday morning vibes in JP Nagar.
                         </p>
                     </div>
                 </div>
@@ -228,57 +259,173 @@
         <!-- Value Proposition Section -->
         <section class="value-prop scroll-reveal">
             <div class="value-prop-container">
-                <span class="mono-label value-tag">VALUE PROPOSITION // SYNAPTIC TUNING</span>
+                <span class="mono-label value-tag">FREE FOREVER // COMMUNITY FIRST</span>
                 <h2 class="value-headline">
-                    A running collective optimized for developers, engineers, and technologists in Bangalore. We run at dawn, debug at dusk.
+                    A running family for everyone in South Bangalore. No fees, no pressure, just pure joy.
                 </h2>
                 <div class="value-details font-sans">
-                    Physical load is the ultimate counterweight to intellectual exhaustion. JPRC provides the exact structure needed to unlock deep work cycles.
+                    No membership fees. No registration charges. Just show up at Puttenahalli Lake every Sunday at 6 AM
+                    and run with us. Your first run is free. Your second run is free. Actually, all runs are free. 🏃‍♀️
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials-section scroll-reveal" id="testimonials">
+        <!-- Connect / Social Section -->
+        <section class="testimonials-section scroll-reveal" id="connect">
             <div class="section-label">
-                <span class="mono-label">SYSTEM WITNESSES // TESTIMONIALS</span>
+                <span class="mono-label">CONNECT WITH US // STAY IN THE LOOP</span>
             </div>
-            
+
             <h2 class="testimonials-header">
-                Endorsed by the <span class="gradient-text">optimized</span>.
+                Be part of the <span class="gradient-text">conversation.</span>
             </h2>
 
             <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
+                <!-- Instagram -->
                 <div class="testimonial-card">
                     <p class="quote">
-                        “The sub-5:00 pace is non-negotiable. Running here mimics compiler optimization—removing bloat, maximizing raw output.”
+                        "Daily stories, route updates, and runner spotlights. Follow us for Sunday morning energy and
+                        post-run chai photos."
                     </p>
                     <div class="witness-info">
-                        <div class="witness-avatar">
-                            <img src="assets/witness1.jpg" alt="Witness 1" class="avatar-img">
-                        </div>
                         <div class="witness-meta">
-                            <span class="witness-name mono-label">ATHLETE_09 // CORE ARCHITECT</span>
-                            <span class="witness-org mono-label">TECH_CORP // DEVIANT</span>
+                            <span class="witness-name mono-label">📸 INSTAGRAM // @JPNAGARRUNCLUB</span>
+                            <span class="witness-org mono-label">DAILY UPDATES // RUNNER SPOTLIGHTS</span>
                         </div>
                     </div>
+                    <a href="https://instagram.com/jpnagarrunclub" target="_blank"
+                        class="social-link-btn mono-label">FOLLOW ON INSTAGRAM →</a>
                 </div>
 
-                <!-- Testimonial 2 -->
+                <!-- WhatsApp -->
                 <div class="testimonial-card">
                     <p class="quote">
-                        “JPRC is where my code and cardiovascular systems converge. The Sunday loops are essential for my sanity and cognitive capacity.”
+                        "Real-time updates, route changes, and last-minute chai plans. Join 120+ active members already
+                        in the group."
                     </p>
                     <div class="witness-info">
-                        <div class="witness-avatar">
-                            <img src="assets/witness2.jpg" alt="Witness 2" class="avatar-img">
-                        </div>
                         <div class="witness-meta">
-                            <span class="witness-name mono-label">ATHLETE_31 // SYSTEMS ENGINEER</span>
-                            <span class="witness-org mono-label">KUBERNETES_DEV // DEVIANT</span>
+                            <span class="witness-name mono-label">💬 WHATSAPP // 120+ ACTIVE MEMBERS</span>
+                            <span class="witness-org mono-label">REAL-TIME UPDATES // CHAI PLANS</span>
                         </div>
                     </div>
+                    <a href="https://chat.whatsapp.com/YOURGROUPINVITELINK" target="_blank"
+                        class="social-link-btn mono-label">JOIN WHATSAPP GROUP →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section scroll-reveal" id="gallery">
+            <div class="section-label">
+                <span class="mono-label">FROM OUR RUNS // SUNDAY MORNING MOMENTS 📸</span>
+            </div>
+            <div class="gallery-header-row">
+                <h2 class="gallery-headline">Smiles, sweat &amp; <span class="gradient-text">Sunday mornings.</span></h2>
+                <a href="gallery.html" class="social-link-btn mono-label">VIEW FULL GALLERY →</a>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item--tall scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=115Aaq0mKkIqeJTmp5pbRkeCW7bJ9KZYy&sz=w800"
+                        alt="JPRC Run Moment 1" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 001</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1DtrpNrXwyL2DjHtuyLdYBQ0enBVky3BW&sz=w800"
+                        alt="JPRC Run Moment 2" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 002</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1cSs217ylqgvk5NypXPGKUxR_kwqoVcoZ&sz=w800"
+                        alt="JPRC Run Moment 3" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 003</span></div>
+                </div>
+                <div class="gallery-item gallery-item--wide scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1cbktLGE654ZNwhkACKhZdldGJshp6LCL&sz=w800"
+                        alt="JPRC Run Moment 4" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 004</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1tnc4DYRTO6q5xc_0uyIo8ouFP2PO1vf3&sz=w800"
+                        alt="JPRC Run Moment 5" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 005</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1qppuMHta_so4sCoNv-Fp5W-J0ErQxyNn&sz=w800"
+                        alt="JPRC Run Moment 6" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 006</span></div>
+                </div>
+                <!-- Week 11 photos -->
+                <div class="gallery-item gallery-item--wide scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1GIwjsXkZcSbNjlGUjbOO0UMLzfC8EMam&sz=w800"
+                        alt="JPRC Run Moment 7" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 007</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1rHvliwM-LAnhyPTgfsmBdG5Qrlgw8pMp&sz=w800"
+                        alt="JPRC Run Moment 8" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 008</span></div>
+                </div>
+                <div class="gallery-item gallery-item--tall scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1-MWEuRIix74J_Kj-qiw0b0QiflDffUaZ&sz=w800"
+                        alt="JPRC Run Moment 9" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 009</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1uYulzB_TjUE3lxTJAEM6WJkG9cMkcVmf&sz=w800"
+                        alt="JPRC Run Moment 10" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 010</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=11G-gvnhQm6YfqryvdPVnLBIexfvm4K4K&sz=w800"
+                        alt="JPRC Run Moment 11" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 011</span></div>
+                </div>
+                <div class="gallery-item gallery-item--wide scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1vtN79Iw_hUsVGd5vkD-tvpLoBI8senZ4&sz=w800"
+                        alt="JPRC Run Moment 12" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 012</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1NHdkZaPQQQPK44j39zQzn7zXRnc2cEPl&sz=w800"
+                        alt="JPRC Run Moment 13" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 013</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1oPYWHjX3ceZSsiv1NnpVgni_zktueu-a&sz=w800"
+                        alt="JPRC Run Moment 14" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 014</span></div>
+                </div>
+                <div class="gallery-item gallery-item--tall scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1z5YW18AVrhK5UoOWnWH1lZ4J03-2qOxs&sz=w800"
+                        alt="JPRC Run Moment 15" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 015</span></div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="https://drive.google.com/thumbnail?id=1iUrzVum6jEtgdseAeQHB5uE-11ySYnq-&sz=w800"
+                        alt="JPRC Run Moment 16" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay"><span class="mono-label">RUN // 016</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Bring Section -->
+        <section class="bring-section scroll-reveal">
+            <div class="section-label">
+                <span class="mono-label">WHAT TO BRING // RUN DAY ESSENTIALS</span>
+            </div>
+            <div class="bring-grid">
+                <div class="bring-item">
+                    <span class="bring-icon">👟</span>
+                    <span class="bring-text font-sans">Comfortable running clothes</span>
+                </div>
+                <div class="bring-item">
+                    <span class="bring-icon">💧</span>
+                    <span class="bring-text font-sans">Your own water bottle</span>
+                </div>
+                <div class="bring-item">
+                    <span class="bring-icon">✨</span>
+                    <span class="bring-text font-sans">Positive energy &amp; good vibes</span>
                 </div>
             </div>
         </section>
@@ -287,15 +434,18 @@
         <section class="final-cta scroll-reveal">
             <div class="cta-card">
                 <div class="cta-inner">
-                    <span class="mono-label cta-tag">FINAL INVITATION // APERIODIC ACCESS</span>
+                    <span class="mono-label cta-tag">READY TO LACE UP? // 🏃‍♂️</span>
                     <h2 class="cta-headline">
-                        Synchronize your physical layer.
+                        Your first run is free.
                     </h2>
                     <p class="cta-body font-sans">
-                        Application queues open every Sunday at 05:30 AM. Strictly capped at 128 active slots to ensure intimate, high-quality, high-tempo runs.
+                        Actually, all runs are free. Show up every Sunday at 6:00 AM at Puttenahalli Lake Entrance, JP
+                        Nagar 7th Phase. Register below so we can save you a spot — and a chai ☕.
                     </p>
                     <div class="cta-btn-wrapper">
-                        <a href="#capture" class="btn-primary"><span class="mono-label">APPLY_FOR_ACCESS</span></a>
+                        <a href="register.html" class="btn-primary"><span class="mono-label">REGISTER FOR NEXT RUN</span></a>
+                        <a href="https://chat.whatsapp.com/YOURGROUPINVITELINK" target="_blank"
+                            class="btn-secondary"><span class="mono-label">JOIN WHATSAPP GROUP</span></a>
                     </div>
                 </div>
             </div>
@@ -308,21 +458,33 @@
             <div class="footer-logo">
                 <div class="logo-footer-wrapper">
                     <img src="assets/logo.png" alt="JPRC Logo" class="logo-img-footer">
-                    <span class="logo-text mono-label">JPRC.SYS // JP NAGAR</span>
+                    <span class="logo-text mono-label">JPRC // JP NAGAR RUN CLUB</span>
                 </div>
-                <p class="footer-desc font-sans">An elite road deviation system. Grounded in South Bangalore asphalt.</p>
+                <p class="footer-desc font-sans">Bangalore's friendliest running community. Run together. Grow together.
+                    Chai together. ☕</p>
             </div>
             <div class="footer-links">
-                <span class="mono-label footer-section-title">CHANNELS</span>
-                <a href="#about" class="footer-link"><span class="mono-label">01 // TELEGRAM_SECURE</span></a>
-                <a href="#bento" class="footer-link"><span class="mono-label">02 // GITHUB_CHRONICLES</span></a>
-                <a href="#countdown" class="footer-link"><span class="mono-label">03 // STRAVA_SYS</span></a>
+                <span class="mono-label footer-section-title">QUICK LINKS</span>
+                <a href="#about" class="footer-link"><span class="mono-label">01 // ABOUT</span></a>
+                <a href="#bento" class="footer-link"><span class="mono-label">02 // FEATURES</span></a>
+                <a href="#schedule" class="footer-link"><span class="mono-label">03 // SCHEDULE</span></a>
+                <a href="register.html" class="footer-link"><span class="mono-label">04 // REGISTER</span></a>
+            </div>
+            <div class="footer-links">
+                <span class="mono-label footer-section-title">SOCIAL</span>
+                <a href="https://instagram.com/jpnagarrunclub" target="_blank" class="footer-link"><span
+                        class="mono-label">📸 @JPNAGARRUNCLUB</span></a>
+                <a href="https://chat.whatsapp.com/YOURGROUPINVITELINK" target="_blank" class="footer-link"><span
+                        class="mono-label">💬 WHATSAPP GROUP</span></a>
+                <a href="mailto:jpnagarrunclub@gmail.com" class="footer-link"><span class="mono-label">📧
+                        JPNAGARRUNCLUB@GMAIL.COM</span></a>
             </div>
             <div class="footer-coords">
-                <span class="mono-label footer-section-title">STAMPS</span>
+                <span class="mono-label footer-section-title">MEET US</span>
+                <span class="mono-label">PUTTENAHALLI LAKE, JP NAGAR</span>
+                <span class="mono-label">EVERY SUNDAY // 6:00 AM</span>
                 <span class="mono-label">COORD: 12.9105° N, 77.5857° E</span>
-                <span class="mono-label">STATUS: DEV_ACTIVE</span>
-                <span class="mono-label">© 2026 JPRC. ALL RIGHTS RESOLVED.</span>
+                <span class="mono-label">© 2025 JPRC. FREE FOR EVERYONE.</span>
             </div>
         </div>
     </footer>
@@ -331,23 +493,40 @@
     <nav class="floating-mobile-nav" id="floating-nav">
         <div class="floating-nav-container">
             <a href="#about" class="float-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                <span class="float-label">SYS</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span class="float-label">HOME</span>
             </a>
             <a href="#bento" class="float-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                <span class="float-label">BENTO</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span class="float-label">FEATURES</span>
             </a>
-            <a href="#capture" class="float-item float-action-btn">
+            <a href="register.html" class="float-item float-action-btn">
                 <span class="mono-label">JOIN</span>
             </a>
-            <a href="#countdown" class="float-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <a href="#schedule" class="float-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
                 <span class="float-label">TIMER</span>
             </a>
-            <a href="#testimonials" class="float-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                <span class="float-label">FEED</span>
+            <a href="#connect" class="float-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="float-label">CONNECT</span>
             </a>
         </div>
     </nav>
@@ -355,4 +534,5 @@
     <!-- App Logic -->
     <script src="app.js"></script>
 </body>
+
 </html>

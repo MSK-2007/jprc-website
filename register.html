@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register // JP Nagar Run Club</title>
+    <meta name="description"
+        content="Register for the next JP Nagar Run Club run. Every Sunday at 6 AM at Clarence Public School, JP Nagar. Free forever.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist+Mono:wght@100..900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Page-specific overrides ── */
+        .reg-page-wrapper {
+            width: 92vw;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            transition: color 0.3s var(--transition-curve);
+        }
+
+        .back-link:hover { color: var(--text-white); }
+        .back-link svg { transition: transform 0.3s var(--transition-curve); }
+        .back-link:hover svg { transform: translateX(-4px); }
+
+        /* Page header */
+        .reg-header { display: flex; flex-direction: column; gap: 20px; }
+
+        .reg-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.4em;
+            color: rgba(255, 255, 255, 0.35);
+            text-transform: uppercase;
+        }
+
+        .reg-headline {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(40px, 7vw, 96px);
+            line-height: 0.88;
+            letter-spacing: -0.04em;
+            color: var(--text-white);
+        }
+
+        .reg-subtext {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 300;
+            max-width: 560px;
+            margin-top: 8px;
+        }
+
+        /* Info row */
+        .reg-info-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 1.5rem;
+            overflow: hidden;
+        }
+
+        .reg-info-cell {
+            background: var(--bg-obsidian);
+            padding: 28px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .reg-info-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            letter-spacing: 0.35em;
+            color: rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
+
+        .reg-info-val {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            color: var(--text-silver);
+            font-weight: 300;
+        }
+
+        /* Schedule */
+        .reg-schedule-block {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .reg-section-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            letter-spacing: 0.4em;
+            color: rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            border-left: 2px solid var(--text-white);
+            padding-left: 14px;
+        }
+
+        .sched-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .sched-table tr {
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .sched-table tr:last-child { border-bottom: none; }
+
+        .sched-table td {
+            padding: 16px 0;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .sched-table td:first-child {
+            color: rgba(255, 255, 255, 0.9);
+            width: 100px;
+        }
+
+        /* Form card */
+        .reg-form-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 2rem;
+            padding: 56px 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .reg-form-title {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(28px, 4vw, 48px);
+            line-height: 0.92;
+            letter-spacing: -0.03em;
+            color: var(--text-white);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width { grid-column: span 2; }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.35);
+            text-transform: uppercase;
+        }
+
+        .form-input,
+        .form-select {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 0.75rem;
+            padding: 14px 18px;
+            color: var(--text-white);
+            font-family: var(--font-mono);
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            outline: none;
+            transition: border-color 0.3s var(--transition-curve), background 0.3s var(--transition-curve);
+            width: 100%;
+            -webkit-appearance: none;
+        }
+
+        .form-input::placeholder { color: rgba(255, 255, 255, 0.2); }
+
+        .form-input:focus,
+        .form-select:focus {
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .form-select option { background: #111; color: #fff; }
+
+        .form-submit-btn {
+            width: 100%;
+            background: var(--text-white);
+            color: var(--bg-obsidian);
+            border: none;
+            border-radius: 0.75rem;
+            padding: 18px 32px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s var(--transition-curve), box-shadow 0.3s var(--transition-curve);
+            margin-top: 8px;
+        }
+
+        .form-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(255, 255, 255, 0.2);
+        }
+
+        .form-note {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Success state */
+        .reg-success {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .success-icon { font-size: 48px; }
+
+        .success-title {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: clamp(28px, 4vw, 48px);
+            color: var(--text-white);
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+        }
+
+        .success-body {
+            font-family: var(--font-sans);
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 300;
+            max-width: 420px;
+            line-height: 1.7;
+        }
+
+        /* UPI block */
+        .upi-block {
+            border: 1px solid var(--border-glass);
+            border-radius: 1.5rem;
+            padding: 36px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .upi-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            letter-spacing: 0.4em;
+            color: rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
+
+        .upi-id-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 0.75rem;
+            padding: 14px 20px;
+        }
+
+        .upi-id-text {
+            font-family: var(--font-mono);
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            color: var(--text-silver);
+        }
+
+        .upi-copy-btn {
+            background: none;
+            border: 1px solid var(--border-glass);
+            border-radius: 0.5rem;
+            padding: 6px 14px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: var(--font-mono);
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s var(--transition-curve), border-color 0.3s var(--transition-curve);
+            white-space: nowrap;
+        }
+
+        .upi-copy-btn:hover { color: var(--text-white); border-color: rgba(255,255,255,0.3); }
+
+        .upi-note {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .reg-info-row { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .reg-form-card { padding: 32px 24px; }
+            .upi-block { padding: 24px 20px; }
+            .upi-id-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <!-- Minimal Nav -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/logo.png" alt="JPRC Logo" class="logo-img">
+                    <span class="logo-text mono-label">JPRC // 560078</span>
+                </a>
+            </div>
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                BACK TO HOME
+            </a>
+        </div>
+    </header>
+
+    <div class="reg-page-wrapper">
+
+        <!-- Page Header -->
+        <div class="reg-header scroll-reveal">
+            <span class="reg-eyebrow">REGISTRATION // SECURE YOUR SPOT + CHAI ☕</span>
+            <h1 class="reg-headline">Lace up &amp;<br> show up.</h1>
+            <p class="reg-subtext">
+                Fill the quick form below and we'll save you a spot — and a chai. Free forever. No membership fees.
+                Just pure community.
+            </p>
+        </div>
+
+        <!-- Run Info Row -->
+        <div class="reg-info-row scroll-reveal">
+            <div class="reg-info-cell">
+                <span class="reg-info-label">NEXT RUN //</span>
+                <span class="reg-info-val">EVERY SUNDAY</span>
+            </div>
+            <div class="reg-info-cell">
+                <span class="reg-info-label">TIME //</span>
+                <span class="reg-info-val">6:00 AM IST</span>
+            </div>
+            <div class="reg-info-cell">
+                <span class="reg-info-label">MEET AT //</span>
+                <span class="reg-info-val">CLARENCE PUBLIC SCHOOL, JP NAGAR</span>
+            </div>
+        </div>
+
+        <!-- Run Day Schedule -->
+        <div class="reg-schedule-block scroll-reveal">
+            <span class="reg-section-label">RUN DAY SCHEDULE //</span>
+            <table class="sched-table">
+                <tr><td>5:45 AM</td><td>Assembly &amp; Warm-up</td></tr>
+                <tr><td>6:00 AM</td><td>5K Run Starts</td></tr>
+                <tr><td>6:15 AM</td><td>10K Run Starts</td></tr>
+                <tr><td>7:30 AM</td><td>Post-run Chai ☕</td></tr>
+                <tr><td>8:00 AM</td><td>Photos &amp; Wrap-up 📸</td></tr>
+            </table>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="reg-form-card scroll-reveal">
+            <h2 class="reg-form-title">Register for the run.</h2>
+
+            <!-- Success Message (hidden by default) -->
+            <div class="reg-success" id="reg-success">
+                <span class="success-icon">🎉</span>
+                <h3 class="success-title">Registration Successful!</h3>
+                <p class="success-body">
+                    See you on Sunday at 6 AM at Clarence Public School, JP Nagar! We'll send a reminder. Bring water,
+                    good vibes, and your running shoes.
+                </p>
+                <a href="index.html" class="btn-primary" style="margin-top:12px;">
+                    <span class="mono-label">← BACK TO HOME</span>
+                </a>
+            </div>
+
+            <!-- The Form -->
+            <form id="reg-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="reg-name">Full Name</label>
+                        <input class="form-input" type="text" id="reg-name" placeholder="Rahul Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="reg-phone">WhatsApp Number</label>
+                        <input class="form-input" type="tel" id="reg-phone" placeholder="+91 98765 43210" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="reg-email">Email (optional)</label>
+                        <input class="form-input" type="email" id="reg-email" placeholder="rahul@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="reg-distance">Preferred Distance</label>
+                        <select class="form-select" id="reg-distance" required>
+                            <option value="" disabled selected>Choose your run</option>
+                            <option value="5k">5K Run</option>
+                            <option value="10k">10K Run</option>
+                            <option value="walk">Casual Walk</option>
+                            <option value="surprise">Surprise me!</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="reg-pace">Your Approximate Pace</label>
+                        <select class="form-select" id="reg-pace">
+                            <option value="" disabled selected>Select pace group</option>
+                            <option value="fast">&lt; 6 min/km (Fast)</option>
+                            <option value="medium">6–8 min/km (Medium)</option>
+                            <option value="easy">8–10 min/km (Easy)</option>
+                            <option value="walk">&gt; 10 min/km (Walk/Jog)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="form-submit-btn" id="reg-submit-btn">
+                    REGISTER FOR NEXT RUN →
+                </button>
+                <p class="form-note">
+                    By registering you agree to run at your own pace and have fun! No spam, just running. ☕
+                </p>
+            </form>
+        </div>
+
+        <!-- Optional UPI Contribution -->
+        <div class="upi-block scroll-reveal">
+            <span class="reg-section-label">SUPPORT THE CLUB // OPTIONAL</span>
+            <p class="upi-note">
+                Membership is <strong style="color:rgba(255,255,255,0.7)">completely free</strong>. But if you'd like to
+                contribute towards post-run chai &amp; hydration, use the UPI ID below. Any amount is ❤️
+            </p>
+            <div class="upi-id-row">
+                <span class="upi-id-text" id="upi-id-text">9019872742@ptsbi</span>
+                <button class="upi-copy-btn" id="upi-copy-btn">COPY UPI</button>
+            </div>
+            <p class="upi-note">
+                After payment, WhatsApp your transaction ID to
+                <span style="color:rgba(255,255,255,0.55)">+91 9876543210</span> for verification.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-logo">
+                <div class="logo-footer-wrapper">
+                    <img src="assets/logo.png" alt="JPRC Logo" class="logo-img-footer">
+                    <span class="logo-text mono-label">JPRC // JP NAGAR RUN CLUB</span>
+                </div>
+                <p class="footer-desc font-sans">Bangalore's friendliest running community. Run together. Grow together.
+                    Chai together. ☕</p>
+            </div>
+            <div class="footer-links">
+                <span class="mono-label footer-section-title">QUICK LINKS</span>
+                <a href="index.html" class="footer-link"><span class="mono-label">01 // HOME</span></a>
+                <a href="index.html#bento" class="footer-link"><span class="mono-label">02 // FEATURES</span></a>
+                <a href="index.html#schedule" class="footer-link"><span class="mono-label">03 // SCHEDULE</span></a>
+                <a href="register.html" class="footer-link"><span class="mono-label">04 // REGISTER</span></a>
+            </div>
+            <div class="footer-links">
+                <span class="mono-label footer-section-title">SOCIAL</span>
+                <a href="https://instagram.com/jpnagarrunclub" target="_blank" class="footer-link"><span
+                        class="mono-label">📸 @JPNAGARRUNCLUB</span></a>
+                <a href="https://chat.whatsapp.com/YOURGROUPINVITELINK" target="_blank" class="footer-link"><span
+                        class="mono-label">💬 WHATSAPP GROUP</span></a>
+                <a href="mailto:jpnagarrunclub@gmail.com" class="footer-link"><span class="mono-label">📧
+                        JPNAGARRUNCLUB@GMAIL.COM</span></a>
+            </div>
+            <div class="footer-coords">
+                <span class="mono-label footer-section-title">MEET US</span>
+                <span class="mono-label">CLARENCE PUBLIC SCHOOL, JP NAGAR</span>
+                <span class="mono-label">EVERY SUNDAY // 6:00 AM</span>
+                <span class="mono-label">COORD: 12.9105° N, 77.5857° E</span>
+                <span class="mono-label">© 2025 JPRC. FREE FOR EVERYONE.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const revealEls = document.querySelectorAll('.scroll-reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+        }, { threshold: 0.08 });
+        revealEls.forEach(el => observer.observe(el));
+
+        // Registration form
+        const regForm = document.getElementById('reg-form');
+        const regSuccess = document.getElementById('reg-success');
+        const submitBtn = document.getElementById('reg-submit-btn');
+
+        regForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value.trim();
+            const phone = document.getElementById('reg-phone').value.trim();
+            const distance = document.getElementById('reg-distance').value;
+
+            if (!name || !phone || !distance) {
+                submitBtn.textContent = 'PLEASE FILL REQUIRED FIELDS';
+                setTimeout(() => { submitBtn.textContent = 'REGISTER FOR NEXT RUN →'; }, 2000);
+                return;
+            }
+
+            submitBtn.textContent = 'SAVING YOUR SPOT...';
+            submitBtn.style.opacity = '0.6';
+            submitBtn.style.pointerEvents = 'none';
+
+            setTimeout(() => {
+                regForm.style.display = 'none';
+                regSuccess.style.display = 'flex';
+            }, 1200);
+        });
+
+        // UPI copy
+        document.getElementById('upi-copy-btn').addEventListener('click', function () {
+            navigator.clipboard.writeText('9019872742@ptsbi').then(() => {
+                this.textContent = 'COPIED ✓';
+                setTimeout(() => { this.textContent = 'COPY UPI'; }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFloatingNav();
     initMobileDrawer();
     initCaptureForm();
+    initGallery();
 });
 
 /**
@@ -61,7 +62,7 @@ function initCountdown() {
             // It is Sunday today. Check if 05:30 AM has already passed
             const currentHour = now.getHours();
             const currentMinute = now.getMinutes();
-            if (currentHour > 5 || (currentHour === 5 && currentMinute >= 30)) {
+            if (currentHour > 6 || (currentHour === 6 && currentMinute >= 0)) {
                 daysToAdd = 7; // Target next Sunday
             } else {
                 daysToAdd = 0; // Target today
@@ -69,7 +70,7 @@ function initCountdown() {
         }
         
         nextSunday.setDate(now.getDate() + daysToAdd);
-        nextSunday.setHours(5, 30, 0, 0); // 05:30:00.000 AM
+        nextSunday.setHours(6, 0, 0, 0); // 06:00:00.000 AM
         
         return nextSunday;
     }
@@ -183,11 +184,11 @@ function initCaptureForm() {
         submitBtn.style.pointerEvents = 'none';
         submitBtn.style.opacity = '0.5';
         const originalBtnText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span class="mono-label">TRANSMITTING...</span>';
+        submitBtn.innerHTML = '<span class="mono-label">REGISTERING...</span>';
         
         feedback.style.display = 'block';
         feedback.style.color = 'rgba(255, 255, 255, 0.4)';
-        feedback.textContent = '> SYNCHRONIZING SECURE KEY WITH NEIGHBORHOOD SYSTEM...';
+        feedback.textContent = '> Saving your spot and a chai... ☕ Almost done!';
 
         // Simulate secure database transaction
         setTimeout(() => {
@@ -197,7 +198,7 @@ function initCaptureForm() {
             submitBtn.innerHTML = originalBtnText;
             
             feedback.style.color = '#e2e8f0';
-            feedback.textContent = `> REGISTERED SUCCESSFUL: [${email.toUpperCase()}]. VERIFICATION PASS DISPATCHED. CHECK SPAM/INBOX.`;
+            feedback.textContent = `> REGISTERED! [${email.toUpperCase()}] — See you Sunday at 6 AM at Puttenahalli Lake! We'll save you a chai ☕`;
             
             // Clear input
             if (emailInput) emailInput.value = '';
@@ -207,7 +208,7 @@ function initCaptureForm() {
                 feedback.style.fadeOut = 'slow';
                 // Reset feedback display
                 setTimeout(() => {
-                    if (feedback.textContent.includes('REGISTERED')) {
+                    if (feedback.textContent.includes('See you Sunday')) {
                         feedback.style.display = 'none';
                         feedback.textContent = '';
                     }
@@ -217,3 +218,53 @@ function initCaptureForm() {
         }, 1500);
     });
 }
+
+/**
+ * 6. Gallery Lightbox
+ */
+function initGallery() {
+    // Create lightbox DOM
+    const lightbox = document.createElement('div');
+    lightbox.className = 'gallery-lightbox';
+    lightbox.innerHTML = `
+        <button class="lightbox-close" id="lightbox-close">CLOSE // ESC</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Gallery photo">
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    // Attach click to each gallery item
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('.gallery-img');
+            if (!img) return;
+            // Use full-size Drive URL instead of thumbnail
+            const thumb = img.src;
+            const fullUrl = thumb.replace(/&sz=w\d+/, '&sz=w1600');
+            lightboxImg.src = fullUrl;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close on button
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        setTimeout(() => { lightboxImg.src = ''; }, 300);
+    }
+}
+
