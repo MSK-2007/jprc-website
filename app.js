@@ -268,3 +268,37 @@ function initGallery() {
     }
 }
 
+/**
+ * 7. Collabs Section — Toggle "View All" / "Show Less"
+ */
+function toggleCollabs() {
+    const grid = document.getElementById('collabs-grid');
+    const btn  = document.getElementById('collabs-toggle-btn');
+    if (!grid || !btn) return;
+
+    const isExpanded = grid.classList.contains('collabs-expanded');
+
+    if (!isExpanded) {
+        // Expand: show all hidden cards
+        grid.classList.add('collabs-expanded');
+        btn.textContent = 'SHOW LESS ←';
+        btn.classList.add('expanded');
+
+        // Trigger scroll-reveal on newly visible cards
+        const hiddenCards = grid.querySelectorAll('.collab-card--hidden');
+        hiddenCards.forEach(card => {
+            card.classList.add('revealed');
+        });
+    } else {
+        // Collapse: hide extra cards and scroll back up to section
+        grid.classList.remove('collabs-expanded');
+        btn.textContent = 'VIEW ALL COLLABS // 13 TOTAL →';
+        btn.classList.remove('expanded');
+
+        // Scroll back to collabs section top smoothly
+        const section = document.getElementById('collabs');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+}
