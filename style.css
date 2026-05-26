@@ -828,6 +828,134 @@ body {
 
 
 
+/* ==========================================================================
+   CORE TEAM SECTION
+   ========================================================================== */
+.core-team-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.core-team-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 680px;
+}
+
+.core-team-headline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    color: var(--text-white);
+}
+
+.core-team-subtext {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 300;
+}
+
+.core-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: default;
+}
+
+.team-member-avatar-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.4s var(--transition-curve), box-shadow 0.4s var(--transition-curve);
+}
+
+.team-member-avatar-wrapper:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.06);
+}
+
+.team-member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: grayscale(40%) brightness(0.82);
+    transition: filter 0.5s var(--transition-curve), transform 0.5s var(--transition-curve);
+}
+
+.team-member-avatar-wrapper:hover .team-member-img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.05);
+}
+
+.team-member-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 14px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.35s var(--transition-curve), transform 0.35s var(--transition-curve);
+}
+
+.team-member-avatar-wrapper:hover .team-member-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member-overlay .mono-label {
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.team-member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 4px;
+}
+
+.team-member-name {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--text-silver);
+    font-weight: 600;
+    transition: color 0.3s var(--transition-curve);
+}
+
+.team-member-card:hover .team-member-name {
+    color: var(--text-white);
+}
+
+.team-member-role {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.33);
+    font-weight: 300;
+}
+
 /* Hover behaviors for Registry */
 .registry-item:hover {
     transform: translateX(4px);
@@ -1289,6 +1417,10 @@ body {
     .member-registry-card {
         grid-column: span 2;
     }
+    
+    .core-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Md Devices (Tablets / Bento 2 columns) */
@@ -1346,6 +1478,11 @@ body {
     .hero-cta-group .btn-primary,
     .hero-cta-group .btn-secondary {
         text-align: center;
+    }
+    
+    .core-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 }
 
@@ -1446,6 +1583,14 @@ body {
     
     .gallery-item--tall { grid-row: span 1; }
     .gallery-item--wide { grid-column: span 1; }
+    
+    .core-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .core-team-headline {
+        font-size: 36px;
+    }
 }
 
 /* ==========================================================================
